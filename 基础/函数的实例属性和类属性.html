@@ -1,0 +1,50 @@
+<body>
+	
+	<!-- 
+			根据函数中声明变量的方式，函数中的变量有3种：
+			1、局部变量：在函数中以普通方式声明的变量，包括以 var 或不加任何前缀声明的变量。
+			2、实例属性：在函数中以 this 前缀修饰的变量。
+			3、类属性：在函数中以函数名前缀修饰的变量。
+			
+			实例属性是属于单个对象的，因此必须通过对象来访问；
+			类属性是属于整个类（也就是函数）本身的，因此必须通过类（也就是函数）来访问。
+			
+	--> 
+	
+	<script type="text/JavaScript">
+			
+		function Person(national, age)
+		{
+				// this 修饰的变量为实例属性
+				this.age = age;
+				
+				// 函数名修饰的变量为类属性
+				Person.national = national;
+				
+				// 局部变量
+				var a = 0;
+		};
+		
+		// 创建 Person 的第一个对象
+		var p1 = new Person('中国', 29);
+		
+		document.writeln('创建的第一个 Person 对象<br />');		
+		document.writeln('p1 的 age 属性为' + p1.age + '<br />');
+		document.writeln('p1 的 national 属性为' + p1.national + '<br />');
+		document.writeln('通过 Person 访问静态 national 属性为' + Person.national + '<br />');
+		document.writeln('p1 的 a 属性为' + p1.a + '<br />');
+		
+		// 创建 Person 的第一个对象
+		var p2 = new Person('美国', 32);
+		
+		document.writeln('创建的第一个 Person 对象<br />');		
+		document.writeln('p1 的 age 属性为' + p1.age + '<br />');
+		document.writeln('p1 的 national 属性为' + p1.national + '<br />');
+		document.writeln('p2 的 age 属性为' + p2.age + '<br />');
+		document.writeln('p2 的 national 属性为' + p2.national + '<br />');
+		document.writeln('通过 Person 访问静态 national 属性为' + Person.national + '<br />');
+		
+	</script>
+	
+	
+</body>

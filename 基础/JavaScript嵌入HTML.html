@@ -1,0 +1,23 @@
+<body>
+	
+	<!--在html页面中嵌入执行JavaScript代码有两种方式。--> 
+	
+	
+	<!-- 1、使用 javascript: 前缀构建执行 JavaScript 代码的URL 
+	       所有可以设置URL的地方都可以使用这种以 javascript: 作为前缀的URL，
+	       当用户触发该URL时， javascript: 后的代码就会获得执行。
+	--> 
+	<a href="javascript:alert('运行 JavaScript！');"> 
+		运行 JavaScript 
+	</a>
+	
+	
+	
+	<!-- 2、使用 script 标签: 如果页面里需要包含大量 JavaScript 代码时，建议使用这种方式。
+	--> 
+	<script type="text/javascript">
+		alert("直接运行的JavaScript!");
+	</script>
+	
+	
+</body>

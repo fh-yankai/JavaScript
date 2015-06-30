@@ -1,0 +1,40 @@
+<body>
+	
+	<!-- 变量有全局变量和局部变量之分。
+			直接定义的变量为全局变量，可以被所有的脚本访问；
+			在函数里定义的变量为局部变量，只在函数内有效。
+			如果全局变量和局部变量同名，则局部变量将覆盖全局变量。
+			
+			注意：JavaScript 变量没有块范围。
+	--> 
+	
+	<script type="text/JavaScript">
+	
+		// 定义全局变量
+		var a = "全局变量";		
+		
+		// 定义函数
+		function checkScope()
+		{
+				var a = "局部变量";		
+				alert(a);
+		}
+		
+		// 调用函数，显示局部变量值
+		checkScope();
+		
+		// 显示全局变量值
+		alert(a);		
+		
+		// 验证 JavaScript 变量是否有块范围
+		for (var i = 0; i < 3; i++)
+		{
+				alert("循环内：i = " + i);
+		}
+		
+		alert("循环外：i = " + i);		// i 在 for 循环外依然有效
+				
+	</script>
+	
+	
+</body>

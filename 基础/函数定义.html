@@ -1,0 +1,63 @@
+<body>
+	
+	<!-- JavaScript 代码复用的单位是函数，但它的函数比结构化程序设计语言的函数功能更丰富。
+			 JavaScript 中函数可以独立存在，也可以做为一个类使用（而且它还是该类唯一的构造器）；
+			 函数本身是一个对象，是 Function 的实例。
+			
+			有三种方式可以定义函数：
+			1、定义命名函数
+			2、定义匿名函数
+			3、使用 Function 类匿名函数
+			
+	--> 
+	
+	<script type="text/JavaScript">
+	
+		// 1、定义命名函数
+		//    JavaScript 是弱类型语言，因此定义函数时，既不需要声明函数的返回值类型，也不需要声明函数的参数类型。
+		//    注意，在同一个<script.../>元素中时，JavaScript允许先调用函数，然后再定义该函数；但在不同的<script.../>元素中时，
+		//    必须先定义后调用，也就是说，后面的<script.../>元素中可以调用前面的<script.../>里定义的函数。
+		hello("World");
+		
+		function hello(name)
+		{
+				alert(name + ", 你好！");
+		}
+				
+		// 2、定义匿名函数
+		//    定义匿名函数时，无需指定函数名，但是在函数定义的语法最后需要紧跟分号(;)
+		//
+		//    通过定义匿名函数，实际上就是定义了一个函数对象，即 Function 实例，接下来可以将这个对象赋给另一个变量。
+	  var f = function(name)
+		{
+				alert(name + ", 你好！");
+		};
+		
+		sayHello = f;
+		
+		sayHello("JavaScript爱好者");
+		
+		// 3、使用 Function 类匿名函数
+		//    JavaScript 提供了一个 Function 类，该类也可以用于定义函数。
+		//
+		//    Function 类的构造器的参数个数可以不受限制，Function 可以接受一系列的字符串参数，其中最后一个字符串参数是函数的执行体，
+		//    执行体的各语句以分号(;)隔开，而前面的各字符串参数则是函数的参数。
+		var fun = new Function("name", "date", 
+														"document.writeln('Function定义函数<br>');" 
+														+ "document.writeln('你好，' + name);" 
+														+ "document.writeln('今天是：' + date);" );
+								
+		var d = new Date()
+		var vYear = d.getFullYear()
+		var vMon = d.getMonth() + 1
+		var vDay = d.getDate()		
+		var today = vYear + '年' + vMon + '月' + vDay + '日';			
+													
+		fun("张三", today);
+		
+		// 输出函数代码
+	  alert(fun);
+	</script>
+	
+	
+</body>

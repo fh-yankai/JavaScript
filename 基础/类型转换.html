@@ -1,0 +1,27 @@
+<body>
+	
+	<!-- JavaScript 支持自动类型转换，转换规则是：
+			1、减号：因为字符串不支持减法运算，所以系统自动将字符串转换成数值。
+			2、加号：因为字符串可以用加号作为连接运算符，所以系统自动将数值转换成字符串，并将两个字符串进行连接运算。
+			
+			自动类型转换虽然方便，但是程序的可读性非常差。JavaScript 提供了强制类型转换函数：
+			toString()：将布尔值、数值等转换成字符串
+			parseInt()：将字符串、布尔值等转换成整数，如果转换失败，返回NaN
+			parseFloat()：将字符串、布尔值等转换成浮点数，如果转换失败，返回NaN
+			
+	--> 
+	
+	<script type="text/JavaScript">
+	
+		var a = "3.14";				
+		var b = a + 2;		
+		var c = parseFloat(a) + 2;
+		
+		alert(b);		
+		alert(c);				
+		alert(parseFloat("abc"));
+				
+	</script>
+	
+	
+</body>

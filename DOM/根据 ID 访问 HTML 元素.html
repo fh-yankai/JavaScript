@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=GBK" />
+		<title> 根据 ID 访问 HTML 元素 </title>
+		
+		<script type="text/JavaScript">
+		
+			var accessByID = function()
+			{
+				alert(document.getElementById("a").innerHTML + "\n" + document.getElementById("b").value); 
+			};
+			
+		</script>
+		
+	</head>
+	<body>
+		<div id="a"> 疯狂 JavaScript </div>
+		<textarea id="b" rows="3" cols="25"> Java EE </textarea>
+		<input type="button" value="访问 2 个元素" onclick="accessByID();"/>
+		
+	</body>
+<html>
